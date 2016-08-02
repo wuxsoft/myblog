@@ -35,11 +35,11 @@ gem 'cancancan'
 gem 'rolify'
 
 # 分页
-gem 'will_paginate'
-
+#gem 'will_paginate'
+gem 'will_paginate', github: 'jonatack/will_paginate'
 # 搜索
-gem 'elasticsearch-model'
-gem 'elasticsearch-rails'
+gem 'ransack', github: 'activerecord-hackery/ransack'
+
 
 #表单
 gem 'simple_form'
