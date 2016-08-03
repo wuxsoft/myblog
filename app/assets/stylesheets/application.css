@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox],
+.radio input[type=radio], .radio-inline input[type=radio]
+{
+  position: inherit;
+  margin-top: 4px;
+  margin-left: 0px;
+}
