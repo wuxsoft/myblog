@@ -13,11 +13,7 @@
  *= require_tree .
  *= require_self
  */
-<<<<<<< HEAD
  @import "bootstrap";
-
-.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio]{position: inherit;margin-left:0px;}
-
 .form-signin {
   max-width: 550px;
   padding: 15px;
@@ -60,12 +56,11 @@
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-=======
+}
 .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox],
 .radio input[type=radio], .radio-inline input[type=radio]
 {
   position: inherit;
   margin-top: 4px;
   margin-left: 0px;
->>>>>>> 6015013eb5de565706f0b3b425cb0d8f5d99685a
 }
