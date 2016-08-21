@@ -1,4 +1,5 @@
 <div class="col-xs-offset-3 col-xs-5">
+<<<<<<< HEAD
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form-signin' }) do |f| %>
     <%= f.error_notification %>
@@ -22,4 +23,30 @@
     <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
     <%= link_to "Back", :back %>
   <% end %>
+=======
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put,class:'form-signin' }) do |f| %>
+    <%= render 'shared/error_messages', target: @member %>
+    <h2 class="form-signin-heading">Edit <%= resource_name.to_s.humanize %></h2>
+    <%= f.label :email ,class:'sr-only' %>
+    <%= f.email_field :email, required: true, autofocus: true,placeholder:true, class:'form-control' %>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+    <% end %>
+    <%= f.label :password,class:'sr-only' %>
+    <%= f.password_field :password, autocomplete: "off",placeholder:true , class:'form-control form-control-multi'%>
+    <%= f.label :password_confirmation,class:'sr-only' %>
+    <%= f.password_field :password_confirmation, autocomplete: "off",placeholder:true, class:'form-control form-control-multi' %>
+    <%= f.label :current_password,class:'sr-only' %>
+    <%= f.password_field :current_password, t: "we need your current password to confirm your changes", required: true,placeholder:true, class:'form-control form-control-last' %>
+    <div class="form-actions">
+      <%= f.button :submit, "Update" ,class:'btn btn-lg btn-primary btn-block'%>
+    </div>
+  <% end %>
+
+  <h3>Cancel my account</h3>
+
+  <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+  <%= link_to "Back", :back %>
+>>>>>>> 6015013eb5de565706f0b3b425cb0d8f5d99685a
 </div>
