@@ -41,6 +41,10 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'cancancan'
 gem 'rolify'
 
+# Sidekiq
+gem 'sidekiq', '~> 4.1', '>= 4.1.4'
+gem 'sinatra', github: 'sinatra/sinatra', :require => false
+
 # 分页
 # gem 'will_paginate'
 gem 'will_paginate', github: 'jonatack/will_paginate'
