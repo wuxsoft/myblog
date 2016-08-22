@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
+# Setting
+gem 'rails-settings-cached'
 
+gem 'awesome_nested_set'
 
+# User Avatar
+gem 'letter_avatar'
+
+gem 'bootstrap', '4.0.0.alpha3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 # Use mysql as the database for Active Record
@@ -27,29 +34,38 @@ gem 'jbuilder', '~> 2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-#角色系统
+# 角色系统
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
-#权限相关
-#gem 'cancan'
+# 权限相关
+# gem 'cancan'
 gem 'cancancan'
 gem 'rolify'
 
 # 分页
-#gem 'will_paginate'
+# gem 'will_paginate'
 gem 'will_paginate', github: 'jonatack/will_paginate'
 # 搜索
 gem 'ransack', github: 'activerecord-hackery/ransack'
-
-
-#表单
+# 表单
 gem 'simple_form'
+# OAuth
+# gem 'doorkeeper'
+# API
+# gem 'active_model_serializers'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# s
+# gem 'rails-i18n', '~> 5.0.0.beta3'
+# gem 'devise-i18n‘
+# gem 'will-paginate-i18n‘
+# gem 'doorkeeper-i18n'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry', '>= 0.10.4'
 end
 
 group :development do
@@ -59,6 +75,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano3-puma'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
