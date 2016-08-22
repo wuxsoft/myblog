@@ -1,24 +1,5 @@
-<div class="topic media topic-30595">
-<!-- <div class="avatar media-left">
-<a href="/jasl"><img class="media-object avatar-48" src="https://ruby-china-files.b0.upaiyun.com/user/avatar/1107.jpg!md" alt="1107"></a>
-</div> -->
-  <div class="infos media-body">
-    <div class="title media-heading">
-      <%= link_to article.title, article %>
-      <!-- <a title="" href="/topics/30595">RubyConf China 2016 讲师和主题介绍 (15/15)(更新完毕)</a> -->
-      <!-- <i class="fa fa-thumb-tack" title="置顶"></i> -->
-      <!-- <i title="" class="fa fa-diamond" data-toggle="tooltip" data-original-title="精华帖"></i> -->
-    </div>
-    <div class="info">
-    <!-- <a class="node" href="/topics/node51">RubyConf</a> -->
-
-      <a class="user-name" data-name="Jasl" href="javascript:;"><%= article.member.email %></a>
-      <!-- <span class="hidden-mobile">
-      •最后由 <a class="user-name" data-name="jasl" href="/jasl">jasl</a> 于 <abbr class="timeago" title="2016-08-18T22:08:09+08:00">3 天前</abbr>回复
-      </span> -->
-    </div>
-  </div>
-  <div class="count media-right">
-    <a class="state-false" href="/topics/30595#reply36">36</a>
-  </div>
+<div href="#" class="list-group-item">
+  <h4 class="list-group-item-heading"><%= article.title %></h4>
+  <p class="list-group-item-text"><%= article.description %></p>
+  <p class="list-group-item-text"><%= article.member.email %></p>
 </div>

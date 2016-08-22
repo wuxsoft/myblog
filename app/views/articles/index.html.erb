@@ -1,34 +1,18 @@
 <div class="row">
   <div class="col-md-9">
-    <div class="topics panel panel-default">
-      <div class="topic-list-heading panel-heading clearfix">
-        <div class="filter pull-right" style="display:none">
-          <span class="l">查看:</span>
-          <a data-turbolinks-action="replace" href="/topics" class="active">默认</a> /
-          <a data-turbolinks-action="replace" href="/topics/popular" class="popular"><i class="fa fa-diamond"></i> 优质帖子</a> /
-          <a data-turbolinks-action="replace" href="/topics/no_reply">无人问津</a> /
-          <a data-turbolinks-action="replace" href="/topics/last">最新创建</a>
-        </div>
+    <% if @articles.blank? %>
+      <div class="no-result" data-turbolinks="true">
+        <p>暂无内容</p>
       </div>
-      <div class="panel-body item-list">
+    <% else %>
+      <%= render @articles %>
+    <% end %>
 
-        <% if @articles.blank? %>
-          <div class="no-result" data-turbolinks="true">
-            <p>暂无内容</p>
-          </div>
-        <% else %>
-        <%= render @articles %>
-        <% end %>
-      <div>
-
-      <div class="panel-footer clearfix">
-        <%= will_paginate @articles if @articles.respond_to?(:total_pages) %>
-      </div>
-
+    <% if !@articles.blank? %>
+    <div class="panel-footer clearfix">
+      <%= will_paginate @articles %>
     </div>
-  </div>
-</div>
-
+    <% end %>
 </div>
 
   <div class="sidebar col-md-3">
@@ -36,26 +20,6 @@
       <div class="panel-body">
         <div class="btn-group btn-block pull-left">
           <a class="btn btn-primary" href="/topics/new">发布新话题</a>
-          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-              <li>
-                <a href="/topics/new?node=44">部署</a>
-              </li>
-              <li>
-                <a href="/topics/new?node=52">新手问题</a>
-              </li>
-              <li>
-                <a href="/topics/new?node=24">工具控</a>
-              </li>
-              <li>
-                <a href="/topics/new?node=3">Gem</a>
-              </li>
-              <li>
-                <a href="/topics/new?node=27">瞎扯淡</a>
-              </li>
-          </ul>
         </div>
       </div>
     </div>

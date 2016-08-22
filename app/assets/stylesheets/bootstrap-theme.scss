@@ -1,0 +1,318 @@
+@import "vars";
+$body-color:                     $black;
+$btn-font-weight:                normal !default;
+$btn-primary-color:              #fff !default;
+$brand-primary:                 $primary !default;
+$brand-info: #4D85FF;
+$brand-success: #2AB52C;
+$brand-danger: #FD654A;
+$brand-warning: #FFD627;
+
+$link-color: $black;
+
+* {
+    outline:0px !important;
+    -webkit-appearance:none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+body {
+  font-family: 'PingHei', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: $black;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* Navbar */
+.navbar-dark {
+  border-radius: 0;
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.25);
+  background: $primary;
+  border-bottom: 1px solid darken($primary, 5%);
+}
+
+.sub-nav {
+  background: #FFF;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.2);
+
+  .nav-item {
+    .nav-link {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    &.active {
+      a.nav-link {
+        background: #eeeff5;
+      }
+    }
+  }
+}
+
+.toolbar {
+  padding: 10px 10px;
+  background: #FFF;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.card {
+  .card-header {
+    padding: 10px 15px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .card-block {
+    padding: 15px;
+  }
+}
+
+/* Button & Input */
+.btn, .form-control {
+  border-radius: 3px;
+  outline: none;
+  font-size: 14px;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 6px 15px 6px 15px;
+  font-size: 14px;
+  line-height: 20px;
+  transition-property: all;
+  transition-duration: 300ms;
+  outline: none !important;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: 32px;
+}
+
+.btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-lg {
+  padding: 10px 25px;
+  font-size: 16px;
+  line-height: 1.333333;
+  border-radius: .3rem;
+}
+
+.btn-sm {
+  padding: 2px 8px 3px;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.btn-xs {
+  padding: 1px 5px 2px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.btn-default {
+  border: 1px solid #ccc;
+  color: #333;
+  background-color: #eee;
+  background-image: -webkit-linear-gradient(#fcfcfc, #eee);
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  &:hover {
+    background-color: #ddd;
+    background-image: -webkit-linear-gradient(#eee, #ddd);
+    background-image: linear-gradient(#eee, #ddd);
+    border-color: #ccc
+  }
+  &:active { background: #ddd; }
+}
+
+.btn-primary {
+  background-color: $brand-primary;
+  background-image: linear-gradient($brand-primary, darken($brand-primary, 5%));
+  border: 1px solid darken($brand-primary, 5%);
+
+  &:hover {
+    background-image: linear-gradient(darken($brand-primary, 2%), darken($brand-primary, 8%));
+    border: 1px solid darken($brand-primary, 10%);
+  }
+  &:active {
+    background-color: darken($brand-primary, 10%);
+  }
+}
+
+.progress-sm {
+  height: 10px;
+}
+
+.progress-xs {
+  height: 6px;
+  border-radius: 3px;
+}
+
+.form-control {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+  color: $black !important;
+
+  &:focus { border-color: $primary; background: #fafaf9; }
+}
+
+.simple_form {
+  .help-block { margin-top: 5px; font-size: 13px; color: #999; }
+  .has-error {
+    .simditor,
+    .form-control { border-color: lighten($brand-danger, 10%); }
+    .help-block { color: $brand-danger;}
+  }
+}
+
+.table {
+  tr {
+    &:hover {
+      background: #f9f9f9;
+      a:link { text-decoration: underline; }
+    }
+  }
+}
+.table-striped {
+  tbody {
+    tr:nth-of-type(odd) {
+      background: #fafafa;
+      &:hover {
+        background: #f9f9f9;
+      }
+    }
+  }
+}
+
+
+.input-group-addon {
+  background: #FFF;
+  border-left: 0px;
+  padding: 5px 8px;
+  font-size: 13px;
+  line-height: 17px;
+  color: $blackLight;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  padding: 8px 15px;
+  margin-top: -20px;
+  border-radius: 0;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+}
+
+.dropdown-menu {
+  font-size: 14px;
+}
+
+/* Modal */
+.modal {
+  .modal-content {
+    h4.title { margin-bottom: 20px; font-size: 15px; }
+    border: 0px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15), 0px 0px 1px 1px rgba(0, 0, 0, 0.05);
+
+    p { margin-bottom: 5px; }
+  }
+  .modal-header {
+    border: 0px;
+    padding-bottom: 0px;
+    .close { margin-top: -8px; font-weight: normal; outline: none !important; }
+    .modal-title {
+      font-size: 16px;
+    }
+  }
+  .modal-footer {
+    border-color: #e0e0e0;
+    border-radius: 0 0 0.3rem 0.3rem;
+
+    .btn { padding-left: 25px; padding-right: 25px; }
+  }
+  .modal-body {
+    .modal-footer {
+      margin: 0 -15px -15px -15px;
+    }
+  }
+}
+
+.modal-backdrop.in {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Nav */
+.nav-tabs {
+  .nav-link {
+    &.active:link,
+    &.active:visited,
+    &.active:hover {
+      color: $primary;
+    }
+  }
+}
+
+/* Alert */
+.alert {
+  padding: 8px 15px;
+  border-radius: 3px;
+  font-size: 14px;
+
+  h2, h3, h4 { font-size: 16px; font-weight: 500; line-height: 100%; margin:0; padding: 0; margin-bottom: 12px; }
+  ul {
+    padding-left: 18px;
+  }
+}
+.alert .close { font-size: 16px; margin-top: -8px; right: -4px; font-weight: normal; }
+.alert-danger {
+  background: #FFF;
+  color: $brand-danger;
+  border-color: $brand-danger;
+}
+.alert-warning {
+  background: #FFF;
+  color: $brand-warning;
+  border-color: $brand-warning;
+}
+.alert-success {
+  background: #FFF;
+  color: $brand-success;
+  border-color: $brand-success;
+}
+.alert-info {
+  background: #FFF;
+  color: $brand-info;
+  border-color: $brand-info;
+}
+
+/* Jumbotron */
+.jumbotron {
+  background: $primaryLight;
+}
+
+
+.page-title {
+  font-size: 16px;
+  padding: 10px 5px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
