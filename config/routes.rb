@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :articles
-  devise_for :members
+  devise_for :members, controllers: { registrations: "members/registrations"}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root :to => "articles#index"
 end
