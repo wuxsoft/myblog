@@ -25,6 +25,10 @@ gem 'jbuilder', '~> 2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# admin ---
+gem 'administrate', github: 'thoughtbot/administrate', branch: 'rails-5'
+gem 'bourbon'
+
 # Setting
 gem 'rails-settings-cached'
 

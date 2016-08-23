@@ -1,6 +1,13 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :members
+    resources :articles
+    resources :roles
+    root to: "members#index"
+  end
+
   resources :articles
   devise_for :members
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
