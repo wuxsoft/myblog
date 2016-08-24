@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    # @article.record_timestamps = false
+    @article.set_view_count
   end
 
   def destory
