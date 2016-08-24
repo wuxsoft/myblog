@@ -3,7 +3,7 @@
   <p class="list-group-item-text"><%= link_to article.description, article %></p>
   <p class="list-group-item-text">
     <span><%= article.member.alias %></span>
-    <span>发布于</span>
-    <span><%= timeago article.created_at%></span>
+    <span>于</span>
+    <span><%= timeago(article.created_at, format: :long) %> 发布，更新于 <%= timeago(article.updated_at, format: :long) %>。</span>
   </p>
 </div>
