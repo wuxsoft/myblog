@@ -15,6 +15,13 @@ module ApplicationHelper
     content_tag('ul', raw(items.join(EMPTY_STRING)), opts)
   end
 
+  def timeago(time, opts = {})
+    opts[:format] ||= :short
+    return raw(content_tag(:span, l(time, format: opts[:format]), title: time)) if 1.days.ago > time
+    ago = time_ago_in_words(time)
+    content_tag(:span, [ago, '前'].join(''), title: time)
+  end
+
   def notice_message
     flash_messages = []
     flash.each do |type, message|

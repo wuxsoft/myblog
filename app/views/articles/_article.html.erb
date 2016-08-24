@@ -1,5 +1,9 @@
-<div href="#" class="list-group-item">
-  <h4 class="list-group-item-heading"><%= article.title %></h4>
-  <p class="list-group-item-text"><%= article.description %></p>
-  <p class="list-group-item-text"><%= article.member.email %></p>
+<div accesskey=""class="list-group-item">
+  <h4 class="list-group-item-heading"><%= link_to article.title, article %></h4>
+  <p class="list-group-item-text"><%= link_to article.description, article %></p>
+  <p class="list-group-item-text">
+    <span><%= article.member.alias %></span>
+    <span>发布于</span>
+    <span><%= timeago article.created_at%></span>
+  </p>
 </div>
