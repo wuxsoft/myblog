@@ -3,9 +3,9 @@
   <%= devise_error_messages! %>
   <h2 class="form-signin-heading">Sign In</h2>
   <%= f.label :email, class:'sr-only' %>
-  <%= f.input_field :email, required: false, placeholder: true, autofocus: true, class:'form-control' %>
+  <%= f.email_field :email, required: false, autofocus: true, placeholder: true, class:'form-control' %>
   <%= f.label :password, class:'sr-only' %>
-  <%= f.input_field :password, required: false, placeholder: true, class:'form-control form-control-last' %>
+  <%= f.password_field :password, required: false, placeholder: true, class:'form-control form-control-last' %>
   <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
 
   <div class="form-actions">

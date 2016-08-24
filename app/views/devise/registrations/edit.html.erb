@@ -3,18 +3,18 @@
     <%= f.error_notification %>
     <h2>Edit <%= resource_name.to_s.humanize %></h2>
     <%= f.label :email, class:'sr-only' %>
-    <%= f.input_field :email, class:'form-control', placeholder: true, required: true, autofocus: true %>
+    <%= f.email_field :email, class:'form-control', placeholder: true, required: true, autofocus: true %>
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
     <%= f.label :alias , class:'sr-only' %>
-    <%= f.input_field :alias, placeholder: true, class:'form-control form-control-multi'%>
+    <%= f.input_field :alias, placeholder: 'Alias', class:'form-control form-control-multi'%>
     <%= f.label :password, class:'sr-only' %>
-    <%= f.input_field :password, class:'form-control form-control-multi', placeholder: true, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+    <%= f.password_field :password, class:'form-control form-control-multi', placeholder: 'New password', autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
     <%= f.label :password_confirmation, class:'sr-only' %>
-    <%= f.input_field :password_confirmation, class:'form-control form-control-multi', placeholder: true, required: false %>
+    <%= f.password_field :password_confirmation, class:'form-control form-control-multi', placeholder: true, required: false %>
     <%= f.label :current_password, class:'sr-only' %>
-    <%= f.input_field :current_password, class:'form-control form-control-last', placeholder: true, hint: "we need your current password to confirm your changes", required: true %>
+    <%= f.password_field :current_password, class:'form-control form-control-last', placeholder: true, hint: "we need your current password to confirm your changes", required: true %>
     <div class="form-actions">
       <%= f.button :submit, "Update", class:'btn btn-lg btn-primary btn-block' %>
     </div>
