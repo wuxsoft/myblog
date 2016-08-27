@@ -7,9 +7,11 @@
           </div>
         <% else %>
           <h2 class="list-group-item-heading"><%= @article.title %></h2>
+          <p class="line"></p>
           <div>
             <p class="list-group-item-text"><%= raw(@article.content) %></p>
           </div>
+          <p class="line"></p>
           <p class="list-group-item-text">
             <span><%= @article.member.alias %></span>
             <span>于</span>
