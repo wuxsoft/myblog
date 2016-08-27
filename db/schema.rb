@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160823085338) do
+ActiveRecord::Schema.define(version: 20160827110749) do
 
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title",                       null: false
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20160823085338) do
     t.integer  "member_id",                   null: false
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.integer  "class_id"
+  end
+
+  create_table "classes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title",                  null: false
+    t.integer  "count",      default: 0, null: false
+    t.integer  "member_id",              null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "members", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -46,6 +55,16 @@ ActiveRecord::Schema.define(version: 20160823085338) do
     t.integer "member_id"
     t.integer "role_id"
     t.index ["member_id", "role_id"], name: "index_members_roles_on_member_id_and_role_id", using: :btree
+  end
+
+  create_table "replies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "member_id",                            null: false
+    t.text     "body",       limit: 65535
+    t.integer  "markup",                   default: 0, null: false
+    t.integer  "article_id",                           null: false
+    t.integer  "parent_id"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
   create_table "roles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
