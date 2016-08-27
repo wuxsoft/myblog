@@ -1,0 +1,2 @@
+class Raply < ApplicationRecord
+end
