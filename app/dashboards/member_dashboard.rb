@@ -22,6 +22,7 @@ class MemberDashboard < Administrate::BaseDashboard
     last_sign_in_ip: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    alias: Field::String,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -53,6 +54,7 @@ class MemberDashboard < Administrate::BaseDashboard
     :last_sign_in_ip,
     :created_at,
     :updated_at,
+    :alias,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -70,6 +72,7 @@ class MemberDashboard < Administrate::BaseDashboard
     :last_sign_in_at,
     :current_sign_in_ip,
     :last_sign_in_ip,
+    :alias,
   ].freeze
 
   # Overwrite this method to customize how members are displayed

@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class ArticleDashboard < Administrate::BaseDashboard
+class CaseDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,14 +9,10 @@ class ArticleDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     member: Field::BelongsTo,
-    case: Field::BelongsTo,
+    article: Field::HasMany,
     id: Field::Number,
     title: Field::String,
-    description: Field::String,
-    content: Field::Text,
-    image: Field::String,
-    view_count: Field::Number,
-    comment_count: Field::Number,
+    count: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -28,7 +24,7 @@ class ArticleDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :member,
-    :case,
+    :article,
     :id,
     :title,
   ].freeze
@@ -37,14 +33,10 @@ class ArticleDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :member,
-    :case,
+    :article,
     :id,
     :title,
-    :description,
-    :content,
-    :image,
-    :view_count,
-    :comment_count,
+    :count,
     :created_at,
     :updated_at,
   ].freeze
@@ -54,19 +46,15 @@ class ArticleDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :member,
-    :case,
+    :article,
     :title,
-    :description,
-    :content,
-    :image,
-    :view_count,
-    :comment_count,
+    :count,
   ].freeze
 
-  # Overwrite this method to customize how articles are displayed
+  # Overwrite this method to customize how cases are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(article)
-  #   "Article ##{article.id}"
+  # def display_resource(case)
+  #   "Case ##{case.id}"
   # end
 end

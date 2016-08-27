@@ -1,10 +1,14 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  get 'replies/index'
+
   namespace :admin do
     resources :members
     resources :articles
     resources :roles
+    resources :replies
+    resources :cases
     root to: "members#index"
   end
 
