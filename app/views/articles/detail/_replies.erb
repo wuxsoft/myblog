@@ -1,0 +1,18 @@
+<% @article.replies.each do |reply| %>
+
+  <div class="card task-assigned-card">
+    <div class="card-header">
+      <span class="user">回复人：<%= reply.member.alias %></span>
+    </div>
+    <div class="card-block">
+      <% if reply.body.present? %>
+      <dl>
+        <dt>回复内容：</dt>
+        <dd class="markdown">
+          <%= raw reply.body %>
+        </dd>
+      </dl>
+      <% end %>
+    </div>
+  </div>
+<% end %>

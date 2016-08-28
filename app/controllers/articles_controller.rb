@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    puts @article.replies.count
     @article.set_view_count
   end
 
