@@ -65,11 +65,11 @@ gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# s
-# gem 'rails-i18n', '~> 5.0.0.beta3'
-# gem 'devise-i18n‘
-# gem 'will-paginate-i18n‘
-# gem 'doorkeeper-i18n'
+#
+gem 'rails-i18n', '~> 5.0.0.beta3'
+gem 'devise-i18n'
+gem 'will-paginate-i18n'
+gem 'doorkeeper-i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

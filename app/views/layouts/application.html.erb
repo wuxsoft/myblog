@@ -4,10 +4,10 @@
     <title>test</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <%= stylesheet_link_tag 'app', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'app', 'data-turbolinks-track' => 'reload' %>
   </head>
-  <body>
+  <body data-controller="<%= controller_name %>" class="page-<%= controller_name %>">
     <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">

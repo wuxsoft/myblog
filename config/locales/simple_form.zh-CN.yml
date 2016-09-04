@@ -1,0 +1,19 @@
+'zh-CN':
+  simple_form:
+    "yes": '是'
+    "no": '否'
+    required:
+      text: '必填'
+      mark: '*'
+    error_notification:
+      default_message: "请修正下面表单中出现的问题，相关条目已标为红色"
+    placeholders:
+      task:
+        title: "输入任务标题"
+    hints:
+      user:
+        login: "登录用户名，格式要求字母数字下划线、中横线"
+        name: "真实姓名"
+        email: "电子信箱地址"
+        password: "密码要求最少 6 个字符"
+        current_password: "如果需要修改密码，请填写旧密码"
