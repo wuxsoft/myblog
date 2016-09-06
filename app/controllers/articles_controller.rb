@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :set_cases, only: [:index, :show]
   def index
     @articles = Article.order('id desc')
     # 已设置默认分页条数为 20 条，设置为 1 为了调试
@@ -7,12 +8,15 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    puts @article.replies.count
     @article.set_view_count
     @reply = Reply.new
     @reply.article = @article
   end
 
   def destory
+  end
+
+  def set_cases
+    @cases = Case.order("count desc")
   end
 end

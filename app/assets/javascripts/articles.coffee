@@ -5,10 +5,10 @@
 window.ArticlesView = Backbone.View.extend
   el: 'body'
   events:
-    'click button.btn-submit': 'repliesSubmit'
+    'click button.btn-submit': 'submitReply'
 
   initialize: ->
     initEditor()
 
-  repliesSubmit: (e)->
+  submitReply: (e)->
     $("#new_reply").submit()
