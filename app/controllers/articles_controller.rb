@@ -2,8 +2,10 @@ class ArticlesController < ApplicationController
   before_action :set_cases, only: [:index, :show]
   def index
     @articles = Article.order('id desc')
+    unless params[:case_id].blank?
+      @articles = @articles.where(case_id: params[:case_id])
+    end
     # 已设置默认分页条数为 20 条，设置为 1 为了调试
-    @articles = @articles.where(case_id: params[:case_id])
     @articles = @articles.paginate page: params[:page] # , per_page: 1
   end
 
