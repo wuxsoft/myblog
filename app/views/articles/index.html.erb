@@ -1,8 +1,8 @@
 <div class="row">
   <div class="col-md-9">
     <% if @articles.blank? %>
-      <div class="no-result" data-turbolinks="true">
-        <p>暂无内容</p>
+      <div accesskey=""class="list-group-item">
+        <p class="list-group-item-text">暂无内容</p>
       </div>
     <% else %>
       <%= render @articles %>

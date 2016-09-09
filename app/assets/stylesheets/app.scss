@@ -21,6 +21,11 @@
 @import "bootstrap";
 @import "bootstrap-theme";
 @import "bourbon";
+body {
+    background: #e9eaed;
+    color: #222527;
+    font-family: Helvetica, Arial,"PingFang SC","Hiragino Sans GB","Source Han Sans CN",Roboto,"Heiti SC","Microsoft Yahei",sans-serif;
+}
 .navbar{
   background-color: #333;
   border-radius: 0px;
@@ -118,4 +123,50 @@
   margin: 0.75rem 0px;
   border-bottom: 1px solid #ddd;
   height: 1px;
+}
+a:link,a:visited {
+  color: #222;
+  font-weight: 400;
+  line-height: 30px;
+}
+a {
+  color: #333;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a {
+  background-color: transparent;
+}
+
+.panel-default {
+  border-color: #ddd;
+}
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #ddd;
+}
+.panel .pull-left a{
+  margin:10px 15px 0px 5px;
+  font-size: 1rem;
+  line-height: 23px;
+  color: #666;
+  min-width: 32px;
+  text-align: center;
+  border-radius: 80px;
+  padding: 3px 8px 3px 8px;
+  display: inline-block;
+  text-decoration: none;
+  background: #f0f0f0;
+  .case-count{
+    color: #fff;
+    margin-left: 3px;
+  }
 }

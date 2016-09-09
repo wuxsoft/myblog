@@ -2,7 +2,9 @@
   <div class="panel-body">
     <div class="btn-group btn-block pull-left">
       <% @cases.each do |detail| %>
-        <%= link_to detail.title, "#{articles_path}?case_id=#{detail.id}" %>
+        <%= link_to articles_path(case_id: detail.id) do %>
+          <%= detail.title%><span class="case-count"><%= detail.count %></span>
+        <% end %>
       <% end %>
     </div>
   </div>
