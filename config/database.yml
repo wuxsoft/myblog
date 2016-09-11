@@ -9,13 +9,15 @@
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
-# default: &default
-#   adapter: mysql2
-#   encoding: utf8
-#   pool: 5
-#   username: root
-#   password:
-#   socket: /tmp/mysql.sock
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+
 # PostgreSQL. Versions 8.2 and up are supported.
 #
 # Install the pg driver:
@@ -32,12 +34,12 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   # For details on connection pooling, see rails configuration guide
+#   # http://guides.rubyonrails.org/configuring.html#database-pooling
+#   pool: 5
 
 development:
   <<: *default
